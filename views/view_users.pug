@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    title Admin Dashboard
+    link(rel="stylesheet" href="/css/view_users.css")
+  body
+    .dashboard
+      .content
+        .top-bar
+          img(src="/img/logo.png", alt="Logo" class="logo")
+          span.welcome-message Welcome Admin!
+          
+        .main-content
+          .dashboard-buttons
+            a.button-blue(href="/admin1") View Appeals
+          h1.dashboard-title Users
+          
+
+          // Add the table with shadowed border and buttons
+          table.table-shadowed
+            thead
+              tr
+                th Full Name
+                th Registration Number
+                th Username
+                th Password
+                th Course
+                th Action
+            tbody
+              //- Example row, replace with actual data
+              tr
+                td Mohamed, Saleh Khamis
+                td 2102302216520
+                td Coder
+                td 12345678
+                td BENG21COE
+                td
+                  button.button-red(onclick="rejectAppeal()") Delete
+                  button.button-blue(onclick="approveAppeal()") Edit
+              //- Add more rows as needed
+
+  script.
+    const appeals = ["Appeal 1", "Appeal 2", "Appeal 3"]; // Replace with actual data
+    function approveAppeal() {
+      // Add logic for approving appeals
+      console.log("Appeal approved");
+    }
+    function rejectAppeal() {
+      // Add logic for rejecting appeals
+      console.log("Appeal rejected");
+    }

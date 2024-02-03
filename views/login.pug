@@ -1,0 +1,20 @@
+html
+  head
+    title Login
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    .login-frame
+      h1 Login
+      if loginError
+        p.error= loginError
+      form(action='/login', method='post')
+        label(for='username') Username:
+        input(type='text', name='username', required=true)
+        br
+        label(for='password') Password:
+        input(type='password', name='password', required=true)
+        br
+        button(type='submit') Sign In
+      br
+      a(href='register') Register
+

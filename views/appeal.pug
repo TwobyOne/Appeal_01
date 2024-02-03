@@ -1,0 +1,44 @@
+// appeal.pug
+
+html
+  head
+    title Appeal
+    link(rel='stylesheet', href='/css/appeal-styles.css')
+    script(src='/js/appeal-script.js') // Add the JavaScript file
+  body
+    .appeal-container
+      h2 Submit New Appeal
+      form(id='appeal-form', action='/submit-appeal', method='post')
+        label(for='name') Name
+        input(type='text', id='name', name='name', value=user ? user.username : '', readonly)
+        label(for='regNumber') Registration Number
+        input(type='text', id='regNumber', name='regNumber', value=user ? user.regNumber : '', readonly)
+        label(for='course') Course
+        input(type='text', id='course', name='course', value=user ? user.course : '', readonly)
+        label(for='letter') Add the letter (PDF)
+        input(type='file', id='letter', name='letter', accept='application/pdf')
+        label(for='reason') Reason 
+        select(id='reason', name='reason')
+          option(value='exam') Exam 
+          option(value='supplimentary') Supplimentary
+          option(value='carry') Carry 
+        button(type='button', onclick='submitForm()') Submit
+
+// Add this script at the end of the file
+script.
+  function submitForm() {
+    // Validate the form fields
+    const name = document.getElementById('name').value;
+    const regNumber = document.getElementById('regNumber').value;
+    const course = document.getElementById('course').value;
+    const letter = document.getElementById('letter').value;
+    const reason = document.getElementById('reason').value;
+
+    if (!name || !regNumber || !course || !letter || !reason) {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+
+    // Submit the form if all fields are filled
+    document.getElementById('appeal-form').submit();
+  }

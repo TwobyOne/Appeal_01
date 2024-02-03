@@ -1,0 +1,37 @@
+/* public/css/submit-success-styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .success-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  h2 {
+    color: #4CAF50;
+  }
+  
+  p {
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #1E90FF;
+  }
+  

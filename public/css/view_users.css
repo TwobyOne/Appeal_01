@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-bar {
+    background-color: #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logout-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: darkred;
+  }
+  
+  .welcome-message {
+    flex-grow: 1; /* Takes up remaining space */
+    text-align: center;
+  }
+  
+  .dashboard-buttons {
+    text-align: left;
+  }
+  
+  .button-blue {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px; /* Space between buttons */
+    display: block; /* Ensure buttons appear on a new line */
+    width: 7rem; /* Full width */
+  }
+  
+  .button-blue:hover {
+    background-color: #2980b9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button-red:hover {
+    background-color: darkred;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .logo {
+    margin-right: 20px; /* Adjust as needed */
+    width: 100px;
+    border-radius: 10px;
+  }
+  
+  .main-content {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .appeals-page,
+  .users-page {
+    display: none;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  /* Add specific styles for appeals and users as needed */
+  
+  
+  /* Add a shadowed border to the table */
+  .table-shadowed {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the table header */
+  .table-shadowed th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style the table rows */
+  .table-shadowed td, .table-shadowed th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Optional: Add some spacing between table cells */
+  .table-shadowed td {
+    padding-right: 16px;
+  }
+  
+  
+  
+  
+  
+  /* Add styles for the new buttons */
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+  background-color: #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: darkred;
+}
+
+.welcome-message {
+  flex-grow: 1; /* Takes up remaining space */
+  text-align: center;
+}
+
+.dashboard-buttons {
+  text-align: left;
+}
+
+.button-blue {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px; /* Space between buttons */
+  display: block; /* Ensure buttons appear on a new line */
+  width: 7rem; /* Full width */
+}
+
+.button-blue:hover {
+  background-color: #2980b9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-red:hover {
+  background-color: darkred;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-title {
+  text-align: center;
+  margin: 0;
+}
+
+.logo {
+  margin-right: 20px; /* Adjust as needed */
+  width: 100px;
+  border-radius: 10px;
+}
+
+.main-content {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.appeals-page,
+.users-page {
+  display: none;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+/* Add specific styles for appeals and users as needed */
+
+
+/* Add a shadowed border to the table */
+.table-shadowed {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the table header */
+.table-shadowed th {
+  background-color: #f2f2f2;
+}
+
+/* Style the table rows */
+.table-shadowed td, .table-shadowed th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Optional: Add some spacing between table cells */
+.table-shadowed td {
+  padding-right: 16px;
+}
+
+
+
+
+
+/* Add styles for the new buttons */
+.button-red, .button-blue {
+  padding: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button-red {
+  background-color: #ff4d4d; /* Red color for rejected button */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px; /* Space between buttons */
+  display: block; /* Ensure buttons appear on a new line */
+  width: 7rem; /* Full width */
+}
+
+.button-blue {
+  background-color: #3498db; /* Blue color for approved button */
+}
+
+/* Add some margin between buttons if needed */
+.button-red + .button-blue {
+  margin-left: 10px;
+}
+
+
+

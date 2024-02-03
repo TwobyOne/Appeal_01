@@ -1,0 +1,31 @@
+html
+  head
+    title Registration
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    .login-frame
+      h1 Registration
+      if errors
+        ul
+          each error in errors
+            li.error= error.msg
+      form(action='/register', method='post')
+        label(for='username') Username:
+        input(type='text', name='username', required=true, pattern='^[a-zA-Z]{2,}$', title='Minimum 2 characters, no numbers')
+        br
+        label(for='regNumber') Registration Number:
+        input(type='text', name='regNumber', required=true, pattern='^[0-9]{13}$', title='Exactly 13 digits, numbers only')
+        br
+        label(for='course') Course:
+        input(type='text', name='course', placeholder='BENG/OD', required=true)
+        br
+        label(for='password') Password:
+        input(type='password', name='password', required=true, pattern='^.{8,}$', title='Minimum 8 characters')
+        br
+        button(type='submit') Register
+
+script.
+  if (#{registrationSuccess})
+    alert('Successful Registration!');
+    window.location.href = '/';
+

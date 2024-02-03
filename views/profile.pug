@@ -1,0 +1,41 @@
+html
+  head
+    title Profile
+    link(rel='stylesheet', href='/css/profile-styles.css')
+  body
+    .profile-container
+      .top-content
+        .user-info
+          h1.username #{user && user.username ? user.username.toUpperCase() : ''}
+          p.reg-number #{user && user.regNumber ? 'Registration Number: ' + user.regNumber : ''}
+          p.course #{user && user.course ? 'Course: ' + user.course : ''}
+        hr
+      .heading-and-button
+        h2.my-appeals My Appeals
+        .add-appeal-btn
+          a(href=`appeal?username=${user.username}&regNumber=${user.regNumber}&course=${user.course}`)
+            button(type='button') + New Appeal
+          form(action='/logout', method='post')
+           button(type='submit') Logout  
+      br
+      .appeals-table
+        if appeals && appeals.length > 0
+          table
+            thead
+              tr
+                th Name
+                th Registration Number
+                th Reason
+                th Date
+                th Status
+            tbody
+              each appeal in appeals
+                tr
+                  td #{appeal.name}
+                  td #{appeal.regNumber}
+                  td #{appeal.reason}
+                  td #{appeal.date}
+                  td #{appeal.status}
+        else
+          p No appeals found
+    
